@@ -5,6 +5,7 @@ import  (
   "math"
 )
 
+// セミコロンイケる場合といけない場合の区別しづらい。ある条件であれば式を代入するという時はチームで話あう必要がある。
 func pow(x, n, lim float64) float64 {
   if v := math.Pow(x, n); v < lim {
     return v
