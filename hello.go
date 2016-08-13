@@ -1,20 +1,12 @@
 package main
 
-import (
-  "fmt"
-  "math"
-)
+import  "fmt"
 
-// 型まで意識しての出力はprintfとなるため注意
+// main内でfor実行
 func main() {
-  // 変数宣言 var枠でひとまとめ
-  // 短縮の「:=」で書くのもあり。値が決まっていたら。
-  // こっちの方がなんかRubyっぽくて好き
-  x := 3
-  y := 4
-  f := math.Sqrt(float64(x*x + y*y))
-  z := uint(f)
-
-  fmt.Println(x, y, z)
-
+  sum := 0
+  for i := 0; i < 10; i++ {
+    sum += i
+  }
+  fmt.Println(sum)
 }
