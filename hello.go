@@ -1,24 +1,10 @@
 package main
 
-import  (
-  "fmt"
-  "time"
-)
+import  "fmt"
 
-// 他言語同様、switch caseは上からの処理
+// deferは実行処理を遅らせる
 func main() {
-  fmt.Print("When's Saturday? ")
-  today := time.Now().Weekday()
+  defer fmt.Println("world")
 
-  switch time.Saturday {
-  case today + 0 :
-    fmt.Println("Today . ")
-  case today + 1 :
-    fmt.Println("Tommorow. ")
-  case today + 2 :
-    fmt.Println("In tow days.")
-  default :
-    fmt.Println("Too far away.")
-  }
-
+  fmt.Println("hello")
 }
