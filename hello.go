@@ -1,14 +1,17 @@
 package main
 
-import  "fmt"
+import  (
+  "fmt"
+  "math"
+)
 
-// main内でfor実行
-// セミコロン省略可(個人的にはコード規約にセミコロン無しを指定したい)
-// ループ条件指定なしの場合は無限ループになる
-func main() {
-  sum := 1
-  for sum < 1000 {
-    sum += sum
+func sqrt(x float64) string {
+  if x < 0 {
+    return sqrt(-x) + "i"
   }
-  fmt.Println(sum)
+  return fmt.Sprint(math.Sqrt(x))
+}
+
+func main() {
+  fmt.Println(sqrt(2), sqrt(-4))
 }
