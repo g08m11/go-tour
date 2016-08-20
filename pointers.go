@@ -4,10 +4,24 @@ package main
 import "fmt"
 
 func main() {
-  // array宣言もRubyと似ててイメージつきやすい
-  // 範囲指定の場合はRubyの「..」ではなく「:」なのがpoint
-  primes := [6] int {2, 3, 5, 7, 11, 13}
+  // 配列でも後ろに何も無くてもカンマ必要
+  names := [4] string {
+    "John",
+    "Paul",
+    "George",
+    "Ringo",
 
-  var s [] int = primes[1:4]
-  fmt.Println(s)
+  }
+
+  fmt.Println(names)
+
+  a := names[0:2]
+  b := names[1:3]
+  fmt.Println(a, b)
+
+  b[0] = "XXX"
+  fmt.Println(a, b)
+  fmt.Println(names)
+
+
 }
