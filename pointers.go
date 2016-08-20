@@ -3,16 +3,20 @@ package main
 
 import "fmt"
 
+// カンマ区切り同一型で定義するの楽
 type Vertex struct {
-  X int
-  Y int
+  X, Y int
 }
 
-// ドットで呼び出せる感じはRubyと似ていて分かりやすい
-// structのフィールドは、structのポインタを通してアクセスすることも出来る
+// goは変数名の大文字、小文字の制御厳しい
+var  (
+  v1 = Vertex{1, 2}
+  v2 = Vertex{X: 1}
+  v3 = Vertex{}
+  p = &Vertex{1, 2}
+)
+
+
 func main() {
-  v := Vertex{1, 2}
-  p := &v
-  p.X = 1e9
-  fmt.Println(v)
+  fmt.Println(v1, p, v2, v3)
 }
